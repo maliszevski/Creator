@@ -7,7 +7,6 @@ import jakarta.persistence.*;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    // automatyczne generowanie wartości klucza przy wstawianiu rekordu (np. AUTO_INCREMENT w MySQL).
     private int id;
 
     @Column
@@ -29,7 +28,7 @@ public class Customer {
     private String postcode;
 
     @Column
-    private int nipNumber;
+    private String nipNumber;
 
     public int getId() {
         return id;
@@ -87,11 +86,11 @@ public class Customer {
         this.postcode = postcode;
     }
 
-    public int getNipNumber() {
+    public String getNipNumber() {
         return nipNumber;
     }
 
-    public void setNipNumber(int nipNumber) {
+    public void setNipNumber(String nipNumber) {
         this.nipNumber = nipNumber;
     }
 }

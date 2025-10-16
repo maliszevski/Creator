@@ -40,7 +40,7 @@ public class RepairOrderIntegrationTest {
         customer = customerRepository.save(customer);
 
         Vehicle vehicle = new Vehicle();
-        vehicle.setCustomer(customer); 
+        vehicle.setCustomer(customer); // relacja ManyToOne
         vehicle.setBrand("Toyota");
         vehicle.setModel("Corolla");
         vehicle.setYearOfProduction(2020);
@@ -63,4 +63,6 @@ public class RepairOrderIntegrationTest {
         assertThat(savedOrder.get().getVehicle().getCustomer().getName()).isEqualTo("Jan");
         assertThat(savedOrder.get().getDescription()).isEqualTo("Wymiana oleju i filtrów");
     }
+
+
 }
