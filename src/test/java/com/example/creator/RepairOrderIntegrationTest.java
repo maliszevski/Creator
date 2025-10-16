@@ -40,7 +40,7 @@ public class RepairOrderIntegrationTest {
         customer = customerRepository.save(customer);
 
         Vehicle vehicle = new Vehicle();
-        vehicle.setCustomer(customer); // relacja ManyToOne
+        vehicle.setCustomer(customer); 
         vehicle.setBrand("Toyota");
         vehicle.setModel("Corolla");
         vehicle.setYearOfProduction(2020);
